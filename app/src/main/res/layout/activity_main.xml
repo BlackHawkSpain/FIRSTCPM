@@ -16,6 +16,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:src="@drawable/ic_f1_car_svgrepo_com"
         android:id="@+id/car"
+
         >
 
     </ImageView>
@@ -25,11 +26,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Username"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/cancel"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="@id/ok"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"/>
+        app:layout_constraintTop_toBottomOf="@+id/car"
+        android:layout_margin="8dp"/>
 
     <TextView
         android:id="@+id/password"
@@ -39,6 +40,7 @@
         app:layout_constraintTop_toBottomOf="@+id/username"
         app:layout_constraintEnd_toEndOf="@id/cancel"
         app:layout_constraintStart_toStartOf="@id/ok"
+        android:layout_margin="8dp"
         app:layout_constraintHorizontal_bias="0.496"/>
     <Button
         android:id="@+id/ok"
