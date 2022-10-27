@@ -72,7 +72,7 @@
         app:layout_constraintEnd_toEndOf="@id/lineright"
         app:layout_constraintStart_toStartOf="@id/lineleft"
         android:background="@color/white"
-
+        app:passwordToggleEnabled="true"
         >
     <EditText
         android:layout_width="match_parent"
@@ -80,7 +80,6 @@
         android:background="@color/white"
         android:hint="Password"
         android:inputType="textPassword"
-
         />
     </com.google.android.material.textfield.TextInputLayout>
 
