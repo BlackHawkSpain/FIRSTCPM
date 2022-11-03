@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".LoginActivity"
     tools:layout_editor_absoluteX="0dp"
     tools:layout_editor_absoluteY="-356dp"
     android:background="@color/paleta5">
@@ -22,8 +22,6 @@
 
     </ImageView>
 <com.google.android.material.textfield.TextInputLayout
-    android:layout_width="0dp"
-    android:layout_height="wrap_content"
     android:id="@+id/username"
     app:startIconDrawable="@drawable/ic_casco"
 
@@ -31,10 +29,9 @@
     app:layout_constraintEnd_toEndOf="@id/lineright"
     app:layout_constraintStart_toStartOf="@id/lineleft"
     app:layout_constraintTop_toBottomOf="@+id/car"
-    android:layout_marginTop="32dp"
-    android:background="@color/white"
+    android:layout_marginTop="0dp"
 
-    >
+    style="@style/TextInputLayout">
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -44,16 +41,14 @@
         />
 </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/password"
+        android:id="@+id/email"
         app:layout_constraintTop_toBottomOf="@+id/username"
         app:layout_constraintEnd_toEndOf="@id/lineright"
         app:layout_constraintStart_toStartOf="@id/lineleft"
-        android:background="@color/white"
         app:passwordToggleEnabled="true"
         app:startIconDrawable="@drawable/ic_flag"
-        >
+
+        style="@style/TextinputLayout2">
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -65,23 +60,19 @@
 
     <Button
         android:id="@+id/login"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/password"
+        app:layout_constraintTop_toBottomOf="@+id/email"
         app:layout_constraintStart_toStartOf="@id/lineleft"
-        android:backgroundTint="@color/paleta1"
         android:text="login"
-/>
+        android:backgroundTint="@color/buttonselector"
+
+        style="@style/mainbutton" />
     <Button
         android:id="@+id/cancel"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="@id/login"
         app:layout_constraintStart_toEndOf="@id/login"
         app:layout_constraintEnd_toEndOf="@id/lineright"
-        android:backgroundTint="@color/paleta1"
         android:text="Cancel"
-        android:layout_marginLeft="8dp"/>
+        style="@style/secondary_button" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/lineleft"
@@ -96,5 +87,14 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.8" />
-
+    <TextView
+        android:id="@+id/enlaceSup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/lineleft"
+        app:layout_constraintTop_toBottomOf="@+id/login"
+        android:text="¿Tienes ya una cuenta?"
+        android:onClick="openSignUp"
+        android:textColor="@color/paleta1"
+        tools:ignore="OnClick" />
 </androidx.constraintlayout.widget.ConstraintLayout>
