@@ -30,15 +30,23 @@
     app:layout_constraintStart_toStartOf="@id/lineleft"
     app:layout_constraintTop_toBottomOf="@+id/car"
     android:layout_marginTop="0dp"
-
     style="@style/TextInputLayout">
-    <EditText
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/text_input_edit_text_outlined"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:hint="Username"/>
+
+ <!--   <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
         android:hint="Username"
+        />-->
 
-        />
+
 </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/email"
@@ -47,15 +55,22 @@
         app:layout_constraintStart_toStartOf="@id/lineleft"
         app:passwordToggleEnabled="true"
         app:startIconDrawable="@drawable/ic_flag"
-
         style="@style/TextinputLayout2">
-    <EditText
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/text_input_edit_text_filled"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:hint="Password"/>
+
+  <!--  <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
         android:hint="Password"
         android:inputType="textPassword"
-        />
+        />-->
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
