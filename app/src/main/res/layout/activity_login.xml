@@ -7,7 +7,14 @@
     tools:context=".LoginActivity"
     tools:layout_editor_absoluteX="0dp"
     tools:layout_editor_absoluteY="-356dp"
-    android:background="@color/paleta5">
+    android:background="@drawable/gradient">
+
+    <ImageView
+        android:id="@+id/girl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:scaleType="fitStart"/>
     <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
@@ -16,15 +23,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:src="@drawable/ic_f1_car_svgrepo_com"
-        android:id="@+id/car"
+        android:id="@+id/car"/>
 
-        >
-
-    </ImageView>
 <com.google.android.material.textfield.TextInputLayout
     android:id="@+id/username"
     app:startIconDrawable="@drawable/ic_casco"
-
     android:text="Username"
     app:layout_constraintEnd_toEndOf="@id/lineright"
     app:layout_constraintStart_toStartOf="@id/lineleft"
@@ -112,4 +115,8 @@
         android:onClick="openSignUp"
         android:textColor="@color/paleta1"
         tools:ignore="OnClick" />
+
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
