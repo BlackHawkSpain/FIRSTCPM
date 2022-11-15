@@ -1,1 +1,1 @@
-[fomdopantalla](https://user-images.githubusercontent.com/116081548/201922095-b8500233-3347-4c76-b934-d36555d7e973.PNG)
+![fomdopantalla](https://user-images.githubusercontent.com/116081548/201922289-d2d1955e-f42e-4b34-95d5-fcc11442b592.PNG)
