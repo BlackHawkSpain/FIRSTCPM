@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.example.fundamentals.R;
+import com.AS.First.R;
 
 public class SignupActivity extends AppCompatActivity {
 

@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -23,6 +25,10 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         enlaceSup = findViewById(R.id.enlaceSup);
         //car= findViewById(R.id.car);
+        ImageView car = findViewById(R.id.car);
+        Animation myanim = AnimationUtils.loadAnimation(this,R.anim.fadein);
+        car.startAnimation(myanim);
+
         enlaceSup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
