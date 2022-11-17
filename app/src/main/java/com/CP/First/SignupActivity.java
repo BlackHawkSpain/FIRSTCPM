@@ -1,11 +1,11 @@
-package com.AS.First;
+package com.CP.First;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.AS.First.R;
+import com.CP.First.R;
 
 public class SignupActivity extends AppCompatActivity {
 
