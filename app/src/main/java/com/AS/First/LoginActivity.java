@@ -27,6 +27,8 @@ public class LoginActivity extends AppCompatActivity {
         //car= findViewById(R.id.car);
         ImageView car = findViewById(R.id.car);
         Animation myanim = AnimationUtils.loadAnimation(this,R.anim.fadein);
+       car.startAnimation(myanim);
+        myanim = AnimationUtils.loadAnimation(this, R.anim.fadein);
         car.startAnimation(myanim);
 
         enlaceSup.setOnClickListener(new View.OnClickListener() {
