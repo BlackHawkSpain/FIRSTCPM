@@ -44,14 +44,12 @@ public class Splash extends AppCompatActivity {
        //    Glide for loading girls
        ImageView mSea = findViewById(R.id.backView);
 
-       Glide.with(this)
-               .load("https://images.unsplash.com/photo-1565214975484-3cfa9e56f914?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1482&q=80")
-//                .load(R.drawable.girl)
-               .transition(DrawableTransitionOptions.withCrossFade(100))
-               .centerCrop()
-//                .diskCacheStrategy(DiskCacheStrategy.ALL)
+       Glide.with(this).load("https://www.wsupercars.com/wallpapers-phone/Formula-1/Scuderia-Ferrari/2022-Formula1-Ferrari-F1-75-010-2400p.jpg")
+               //https://www.acfligue.org/wp-content/uploads/2021/12/custom_showroom_1654840098.png
+               .transition(DrawableTransitionOptions.withCrossFade(1000))
                .placeholder(new ColorDrawable(this.getResources().getColor(R.color.teal_200)))
-//                .circleCrop()
+               .centerCrop()
+               //.circleCrop()
                .into(mSea);
 
     }
@@ -65,7 +63,12 @@ public class Splash extends AppCompatActivity {
             public void run() {
                 Intent intent = new Intent(Splash
                         .this, LoginActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
+
+
+
             }
         }, 5000);
 
