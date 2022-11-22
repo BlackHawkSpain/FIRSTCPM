@@ -1,6 +1,8 @@
 package com.CP.First;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.os.Bundle;
 import android.view.ContextMenu;
@@ -10,8 +12,11 @@ import android.webkit.WebView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class main extends AppCompatActivity {
+import com.google.android.material.snackbar.Snackbar;
 
+public class main extends AppCompatActivity {
+    WebView miVisorWeb;
+    SwipeRefreshLayout swipeLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,24 +29,29 @@ public class main extends AppCompatActivity {
         WebView myContext = (WebView) findViewById(R.id.vista);
         registerForContextMenu(myContext);
 
-
-        // DENTRO del Oncreate
-        // cast al Layout SwipeRefresh con el que rodeamos la vista
-        // en el xml y le colocamos un listener
-        //swipeLayout = (SwipeRefreshLayout) findViewById(R.id.myswipe);
-       // swipeLayout.setOnRefreshListener(mOnRefreshListener);
-
         //La vista dentro es un webview con permiso para zoom
-        WebView miVisorWeb = (WebView) findViewById(R.id.vista);
+        miVisorWeb = (WebView) findViewById(R.id.vista);
         //  miVisorWeb.getSettings().setJavaScriptEnabled(true);
         miVisorWeb.getSettings().setBuiltInZoomControls(true);
         miVisorWeb.loadUrl("https://thispersondoesnotexist.com");
 
-
-
+        // DENTRO del Oncreate
+        // cast al Layout SwipeRefresh con el que rodeamos la vista
+        // en el xml y le colocamos un listener
+        swipeLayout = (SwipeRefreshLayout) findViewById(R.id.mySwipe);
+        swipeLayout.setOnRefreshListener(mOnRefreshListener);
 
 
     }
+    protected SwipeRefreshLayout.OnRefreshListener mOnRefreshListener = new SwipeRefreshLayout.OnRefreshListener() {
+        @Override
+        public void onRefresh() {
+            Toast toast0 = Toast.makeText(main.this, "Hi there, I don´t exist", Toast.LENGTH_LONG);
+            toast0.show();
+            miVisorWeb.reload();
+            swipeLayout.setRefreshing(false);
+        }
+    };
 
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         getMenuInflater().inflate(R.menu.menu_context, menu);
@@ -51,25 +61,25 @@ public class main extends AppCompatActivity {
 
     @Override
     public boolean onContextItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
+       switch (item.getItemId()) {
             case R.id.item1:
-                Toast toast = Toast.makeText(this, "Item copied",
-                        Toast.LENGTH_LONG);
-                toast.show();
+//                Toast toast = Toast.makeText(this, "Item copied",
+//                        Toast.LENGTH_LONG);
+//                toast.show();
 
-//                final ConstraintLayout mLayout = findViewById(R.id.myMainConstraint);
-//
-//                Snackbar snackbar = Snackbar
-//                        .make(mLayout, "fancy a Snack while you refresh?", Snackbar.LENGTH_LONG)
-//                        .setAction("UNDO", new View.OnClickListener() {
-//                            @Override
-//                            public void onClick(View view) {
-//                                Snackbar snackbar1 = Snackbar.make(mLayout, "Action is restored!", Snackbar.LENGTH_SHORT);
-//                                snackbar1.show();
-//                            }
-//                        });
-//
-//                snackbar.show();
+                final ConstraintLayout mLayout = findViewById(R.id.myMainConstraint);
+
+                Snackbar snackbar = Snackbar
+                        .make(mLayout, "fancy a Snack while you refresh?", Snackbar.LENGTH_LONG)
+                        .setAction("UNDO", new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                Snackbar snackbar1 = Snackbar.make(mLayout, "Action is restored!", Snackbar.LENGTH_SHORT);
+                                snackbar1.show();
+                            }
+                       });
+
+                snackbar.show();
 
                 return true;
 
@@ -80,7 +90,8 @@ public class main extends AppCompatActivity {
                 return true;
 
             default:
-                return super.onContextItemSelected(item);
+//                return super.onContextItemSelected(item);
+                return false;
         }
 
     }
