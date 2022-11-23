@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/item1"
+        android:title="Copy"
+        android:icon="@drawable/ic_casco"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/item2"
+        android:title="Settings"
+        android:icon="@drawable/ic_f1_car_svgrepo_com"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/item3"
+        android:title="Bottom appbar"
+        android:icon="@drawable/ic_casco"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/item4"
+        android:title="Bottom navigation"
+        android:icon="@drawable/ic_casco"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/item5"
+        android:title="Signout"
+        android:icon="@drawable/ic_casco"
+        app:showAsAction="never"/>
+
+
+
+</menu>

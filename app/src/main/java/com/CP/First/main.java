@@ -6,6 +6,7 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.os.Bundle;
 import android.view.ContextMenu;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebView;
@@ -43,6 +44,7 @@ public class main extends AppCompatActivity {
 
 
     }
+
     protected SwipeRefreshLayout.OnRefreshListener mOnRefreshListener = new SwipeRefreshLayout.OnRefreshListener() {
         @Override
         public void onRefresh() {
@@ -52,10 +54,16 @@ public class main extends AppCompatActivity {
             swipeLayout.setRefreshing(false);
         }
     };
-
+    @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         getMenuInflater().inflate(R.menu.menu_context, menu);
 
+
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.menu_appbar, menu);
+        return true;
 
     }
 
@@ -95,5 +103,7 @@ public class main extends AppCompatActivity {
         }
 
     }
+
+
 
 }
