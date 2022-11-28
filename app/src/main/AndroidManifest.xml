@@ -17,41 +17,48 @@
         tools:targetApi="31">
         <activity
             android:name=".main"
+            android:exported="true">
+            <!--            carga la app desde el  activity main donde se añade la url de la
+             web thispersondoesnotexist (La dejo comentada)-->
+            <!--                        <intent-filter>-->
+            <!--                            <action android:name="android.intent.action.MAIN" />-->
+
+            <!--                            <category android:name="android.intent.category.LAUNCHER" />-->
+            <!--                        </intent-filter>-->
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <!--        el .Splash hace que inicie la app con una pantalla antes del activitylogin
+         ya que está asignado como LAUNCHER-->
+        <activity
+
+            android:name=".Splash"
             android:exported="true"
-            android:parentActivityName=".LoginActivity">
+            android:screenOrientation="portrait">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+<!--        el signup activity muestra que su parent es el Login y tiene asignado un
+noActionBar-->
+        <activity
+            android:name=".SignupActivity"
+            android:exported="false"
+            android:parentActivityName=".LoginActivity"
+            android:theme="@style/MyTheme.NoActionBar" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true"
+            android:theme="@style/MyTheme.NoActionBar">
 <!--            <intent-filter>-->
 <!--                <action android:name="android.intent.action.MAIN" />-->
 
 <!--                <category android:name="android.intent.category.LAUNCHER" />-->
 <!--            </intent-filter>-->
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".Splash"
-            android:exported="true"
-            android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".SignupActivity"
-            android:exported="false"
-            android:theme="@style/MyTheme.NoActionBar"
-            />
-        <activity
-            android:name=".LoginActivity"
-            android:exported="true"
-            android:theme="@style/MyTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

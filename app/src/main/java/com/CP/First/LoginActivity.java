@@ -16,7 +16,7 @@ import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
 
 public class LoginActivity extends AppCompatActivity {
 
-   TextView enlaceSup;
+   TextView enlaceSup;//enlaceSup es la imagen de fondo de la pantalla de Login
     ImageView car;
 
     @Override
@@ -36,6 +36,8 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View view) {
             openSignUp();
             }
+
+
 
         });
         ImageView mGirl = findViewById(R.id.girl);
