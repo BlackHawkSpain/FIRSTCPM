@@ -41,7 +41,7 @@ public class Splash extends AppCompatActivity {
 
        //    Glide for loading girls
        ImageView mSea = findViewById(R.id.backView);
-
+      // ImageView mGirl = findViewById(R.id.girl);
        Glide.with(this).load("")
                //https://www.acfligue.org/wp-content/uploads/2021/12/custom_showroom_1654840098.png
                .transition(DrawableTransitionOptions.withCrossFade(1000))
@@ -61,8 +61,8 @@ public class Splash extends AppCompatActivity {
             public void run() {
                 Intent intent = new Intent(Splash
                         .this, LoginActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);//hace que no podamos ir hacia atrás en el signup Activity
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK); //hace que no podamos ir hacia atrás en el signup Activity
                 startActivity(intent);
 
 

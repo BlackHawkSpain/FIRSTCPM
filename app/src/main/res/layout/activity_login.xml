@@ -83,7 +83,7 @@
         app:layout_constraintStart_toStartOf="@id/lineleft"
         android:text="login"
         android:backgroundTint="@color/buttonselector"
-
+        android:onClick="iniciarMain"
         style="@style/mainbutton" />
     <Button
         android:id="@+id/cancel"

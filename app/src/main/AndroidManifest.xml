@@ -18,13 +18,13 @@
         <activity
             android:name=".main"
             android:exported="true">
-            <!--            carga la app desde el  activity main donde se añade la url de la
-             web thispersondoesnotexist (La dejo comentada)-->
-            <!--                        <intent-filter>-->
-            <!--                            <action android:name="android.intent.action.MAIN" />-->
+<!--            carga la app desde el activity main donde se añade la url de la-->
+<!--            web thispersondoesnotexist (La dejo comentada)-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
 
-            <!--                            <category android:name="android.intent.category.LAUNCHER" />-->
-            <!--                        </intent-filter>-->
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -43,8 +43,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-<!--        el signup activity muestra que su parent es el Login y tiene asignado un
-noActionBar-->
+        <!--        el signup activity muestra que su parent es el Login y tiene asignado un
+        noActionBar-->
         <activity
             android:name=".SignupActivity"
             android:exported="false"
@@ -54,11 +54,11 @@ noActionBar-->
             android:name=".LoginActivity"
             android:exported="true"
             android:theme="@style/MyTheme.NoActionBar">
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
+            <!--            <intent-filter>-->
+            <!--                <action android:name="android.intent.action.MAIN" />-->
 
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
+            <!--                <category android:name="android.intent.category.LAUNCHER" />-->
+            <!--            </intent-filter>-->
         </activity>
     </application>
 
