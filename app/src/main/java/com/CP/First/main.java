@@ -84,7 +84,7 @@ public class main extends AppCompatActivity {
 
 //        // un XML a medida para el diálogo
 //        builder.setView(getLayoutInflater().inflate(R.layout.alertdialog_view, null));
-
+//
         // add the buttons
         builder.setPositiveButton("Signout", new DialogInterface.OnClickListener() {
             @Override
@@ -157,6 +157,15 @@ public class main extends AppCompatActivity {
 
                 showAlertDialogButtonClicked(main.this);
             }
+            if(id== R.id.itemvolver){
+                id = item.getItemId();
+                if(id == R.id.itemvolver){
+                    Intent intent = new Intent(this, LoginActivity.class);
+                    startActivity(intent);
+                    return true;
+                }
+
+            }
 
             return super.onOptionsItemSelected(item);
         }
@@ -213,13 +222,6 @@ public class main extends AppCompatActivity {
 
                     return true;
 
-                case R.id.itemvolver:
-                    int id = item.getItemId();
-                    if(id == R.id.itemvolver){
-                        Intent intent = new Intent(this, LoginActivity.class);
-                        startActivity(intent);
-                        return true;
-                    }
                 case R.id.item2:
                     Toast toast2 = Toast.makeText(this, "Downloading item...",
                             Toast.LENGTH_LONG);

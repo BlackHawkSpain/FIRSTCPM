@@ -42,7 +42,7 @@ public class Splash extends AppCompatActivity {
        //    Glide for loading girls
        ImageView mSea = findViewById(R.id.backView);
       // ImageView mGirl = findViewById(R.id.girl);
-       Glide.with(this).load("")
+       Glide.with(this).load("https://i0.wp.com/piziadas.com/wp-content/uploads/2013/06/logo_ferrari_animado.gif?resize=300%2C300")
                //https://www.acfligue.org/wp-content/uploads/2021/12/custom_showroom_1654840098.png
                .transition(DrawableTransitionOptions.withCrossFade(1000))
                .placeholder(new ColorDrawable(this.getResources().getColor(R.color.teal_200)))
