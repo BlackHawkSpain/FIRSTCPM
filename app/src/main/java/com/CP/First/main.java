@@ -213,6 +213,13 @@ public class main extends AppCompatActivity {
 
                     return true;
 
+                case R.id.itemvolver:
+                    int id = item.getItemId();
+                    if(id == R.id.itemvolver){
+                        Intent intent = new Intent(this, LoginActivity.class);
+                        startActivity(intent);
+                        return true;
+                    }
                 case R.id.item2:
                     Toast toast2 = Toast.makeText(this, "Downloading item...",
                             Toast.LENGTH_LONG);

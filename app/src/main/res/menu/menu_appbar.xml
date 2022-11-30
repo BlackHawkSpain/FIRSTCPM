@@ -26,6 +26,11 @@
         android:title="Signout"
         android:icon="@drawable/ic_exit"
         app:showAsAction="never"/>
+    <item
+        android:id="@+id/itemvolver"
+        android:title="volver"
+        android:icon="@drawable/ic_back"
+        app:showAsAction="ifRoom"/>
 
 
 
