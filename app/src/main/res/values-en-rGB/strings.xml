@@ -2,4 +2,5 @@
 <resources>
     <string name="app_name">FiRST</string>
     <string name="bottom_app_bar_label_title">bottom app bar</string>
+    <string name="Stay_here" translatable="false">Stay here</string>
 </resources>

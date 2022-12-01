@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">PRiMERA</string>
     <string name="bottom_app_bar_label_title" translatable="false">Bottom app bar</string>
+    <string name="Stay_here" translatable="false">Permanecer</string>
 </resources>
