@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">FIRST</string>
-    <string name="bottom_app_bar_label_title">Bottom app bar</string>
+    <string name="app_name">PRiMERA</string>
+    <string name="bottom_app_bar_label_title" translatable="false">Bottom app bar</string>
 </resources>

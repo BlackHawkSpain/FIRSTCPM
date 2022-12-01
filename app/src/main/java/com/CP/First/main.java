@@ -154,7 +154,7 @@ public class main extends AppCompatActivity {
             }
 
             if (id == R.id.item5) {
-
+//llama al metodo que hace las acciones en el builder
                 showAlertDialogButtonClicked(main.this);
             }
             if(id== R.id.itemvolver){
