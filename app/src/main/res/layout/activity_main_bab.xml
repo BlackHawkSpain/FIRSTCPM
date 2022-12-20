@@ -5,15 +5,41 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainBab">
+
     <androidx.coordinatorlayout.widget.CoordinatorLayout
-        android:id="@+id/bottom_app_bar"
+        android:id="@+id/coordinator"
         android:layout_width="match_parent"
         android:layout_height="92dp"
-        android:layout_gravity="bottom"
-        app:fabAlignmentMode="center"
-        app:menu="@menu/bottom_app_bar_menu"
-        app:navigationIcon="@drawable/ic_burger"
-        />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bottom_app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:fabAlignmentMode="center"
+            app:menu="@menu/bottom_app_bar_menu"
+
+            app:navigationIcon="@drawable/ic_burger"
+            />
+        <!--            style="@style/Widget.MaterialComponents.BottomAppBar.PrimarySurface"-->
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            app:tint="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add_on_secondary_24dp"
+            app:fabSize="normal"
+            android:backgroundTint="@color/white"
+            app:layout_anchor="@+id/bottom_app_bar"
+
+            />
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
