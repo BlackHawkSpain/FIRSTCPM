@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             app:fabAlignmentMode="center"
-            app:menu="@menu/bottom_app_bar_menu"
+            app:menu="@menu/menu_appbar"
 
             app:navigationIcon="@drawable/ic_burger"
             />
